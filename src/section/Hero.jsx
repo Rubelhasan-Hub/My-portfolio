@@ -6,6 +6,12 @@ import { GrLinkedin } from "react-icons/gr";
 import { SiDiscord } from "react-icons/si";
 
 export const Hero = () => {
+    const handleDownload = () => {
+        const link = document.createElement("a");
+        link.href = "/cv.pdf";
+        link.download = "Rubel-Hasan-CV.pdf";
+        link.click();
+    };
     return (
         <section className="relative min-h-screen flex items-center overflow-hidden">
             {/* Bg */}
@@ -68,24 +74,27 @@ export const Hero = () => {
                         {/* Call to action section */}
                         <div className="flex gap-2">
                             <Button size="lg">
-                                Contact Me <ArrowRight className="w-5 h-5"></ArrowRight>
+                                Contact <span className="hidden lg:block">Me</span><ArrowRight className="w-5 h-5"></ArrowRight>
                             </Button>
-                            <button>
-                                <AnimatedBorderButton>
-                                    Download CV <Download></Download>
-                                </AnimatedBorderButton>
-                            </button>
+
+                            <a href="/public/cv.pdf" target="_blank">
+                                <button onClick={handleDownload}>
+                                    <AnimatedBorderButton>
+                                        <span className="hidden lg:block">Download</span> CV <Download></Download>
+                                    </AnimatedBorderButton>
+                                </button>
+                            </a>
                         </div>
 
                         {/* Social LInks */}
                         <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
                             <span className="text-sm text-muted-foreground">Follow: </span>
                             {[
-                                { icon: FaGithub, href: "#" },
-                                { icon: GrLinkedin, href: "#" },
-                                { icon: SiDiscord, href: "#" },
+                                { icon: FaGithub, href: "https://github.com/Rubelhasan-Hub" },
+                                { icon: GrLinkedin, href: "https://www.linkedin.com/in/rubelhasan-/" },
+                                { icon: SiDiscord, href: "https://discord.com/users/997819259315032129" },
                             ].map((social, idx) => (
-                                <a key={idx} href={social.href} className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"><social.icon className="w-5 h-5" /></a>
+                                <a target="_blank" key={idx} href={social.href} className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"><social.icon className="w-5 h-5" /></a>
                             ))}
                         </div>
 
@@ -97,13 +106,13 @@ export const Hero = () => {
                         <div >
                             <div >
                                 <div className="flex justify-center rounded-3xl p-2">
-                                    <img src="/public/hero-person.jpg" alt="Rubel Hasan's image" className="w-[65%] object-right lg:aspect-7/10 glow-border glass rounded-3xl transition-transform duration-500 hover:scale-105" />
+                                    <img src="/public/hero-person.jpg" alt="Rubel Hasan's image" className="w-[65%] object-right glow-border glass rounded-3xl transition-transform duration-500 hover:scale-105" />
 
 
                                     {/* Floating badge */}
                                     <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
                                         <div className="flex items-center gap-3">
-                                            <div className="w-3 h-3 bg-green-500 rounded-full animate-puls"/>
+                                            <div className="w-3 h-3 bg-green-500 rounded-full animate-puls" />
                                             <span className="text-sm font-medium">Available For Work</span>
                                         </div>
                                     </div>
