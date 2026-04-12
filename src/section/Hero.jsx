@@ -73,9 +73,11 @@ export const Hero = () => {
 
                         {/* Call to action section */}
                         <div className="flex gap-2">
+                            <a href="mailto:rubelhasanmd29@gmail.com">
                             <Button size="lg">
                                 Contact <span className="hidden lg:block">Me</span><ArrowRight className="w-5 h-5"></ArrowRight>
                             </Button>
+                            </a>
 
                             <a href="/public/cv.pdf" target="_blank">
                                 <button onClick={handleDownload}>
@@ -106,7 +108,7 @@ export const Hero = () => {
                         <div >
                             <div >
                                 <div className="flex justify-center rounded-3xl p-2">
-                                    <img src="/public/hero-person.jpg" alt="Rubel Hasan's image" className="w-[65%] object-right glow-border glass rounded-3xl transition-transform duration-500 hover:scale-105" />
+                                    <img src="/hero-person.jpg" alt="Rubel Hasan's image" className="w-[65%] object-right glow-border glass rounded-3xl transition-transform duration-500 hover:scale-105" />
 
 
                                     {/* Floating badge */}
