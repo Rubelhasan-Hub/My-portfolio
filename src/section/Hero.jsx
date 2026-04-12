@@ -39,7 +39,7 @@ export const Hero = () => {
             <div className="container mx-auto px-6 pt-32 pb-20 relative z-10 flex">
                 <div className="grid lg:grid-cols-2 gap-20">
                     {/* Left Column - Text Content */}
-                    <div className="space-y-8">
+                    <div className="space-y-8 transition-transform duration-500 hover:scale-103">
                         <div className="animate-fade-in">
                             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
@@ -85,7 +85,7 @@ export const Hero = () => {
                                 { icon: GrLinkedin, href: "#" },
                                 { icon: SiDiscord, href: "#" },
                             ].map((social, idx) => (
-                                <a key={idx} href={social.href} className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"><social.icon className="w-5 h-5"/></a>
+                                <a key={idx} href={social.href} className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"><social.icon className="w-5 h-5" /></a>
                             ))}
                         </div>
 
@@ -93,17 +93,31 @@ export const Hero = () => {
                     </div>
 
                     {/* Right side for image */}
-                    <div className="relative animate-fade-in">
-                        <div>
-                            <div className="flex justify-center rounded-3xl p-2">
-                                <img src="/public/hero-person.jpg" alt="Rubel Hasan's image" className="w-[65%] object-right lg:aspect-7/10 glow-border glass rounded-3xl"/>
+                    <div className="relative animate-fade-in animate-delay-300 ">
+                        <div >
+                            <div >
+                                <div className="flex justify-center rounded-3xl p-2">
+                                    <img src="/public/hero-person.jpg" alt="Rubel Hasan's image" className="w-[65%] object-right lg:aspect-7/10 glow-border glass rounded-3xl transition-transform duration-500 hover:scale-105" />
+
+
+                                    {/* Floating badge */}
+                                    <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-3 h-3 bg-green-500 rounded-full animate-puls"/>
+                                            <span className="text-sm font-medium">Available For Work</span>
+                                        </div>
+                                    </div>
+                                    {/* State badge */}
+                                    <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                                        <div className="text-3xl font-bold text-primary">2+</div>
+                                        <div className="text-xl text-muted-foreground">Years Exp.</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </section>
     );
 };
