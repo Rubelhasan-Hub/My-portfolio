@@ -1,4 +1,5 @@
 import './App.css'
+import { Footer } from './layout/Footer'
 import Navbar from './layout/Navbar'
 import About from './section/About'
 import Contact from './section/Contact'
@@ -19,6 +20,7 @@ function App() {
         <Experience/>
         <Testimonials/>
         <Contact/>
+        <Footer/>
       </main>
     </div>
   )

@@ -6,7 +6,7 @@ const projects = [
    title: "keen-keeper",
     description:
       "KeenKeeper is a clean and interactive relationship management app designed to track friendships, monitor communication patterns, and enable quick check-ins like call, text, and video in one place.",
-    image: "/public/Image/project1.png",
+    image: "/Image/project1.png",
     tags: ["Next.js", "React", "JavaScript", "Tailwind"],
     link: "https://keen-keeper-ashen.vercel.app",
     github: "https://github.com/Rubelhasan-Hub/keen-keeper",
@@ -15,7 +15,7 @@ const projects = [
     title: "E-Commerce Platform",
     description:
       "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/public/Image/project2.png",
+    image: "/Image/project2.png",
     tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
     link: "#",
     github: "#",
@@ -24,7 +24,7 @@ const projects = [
     title: "AI Writing Assistant",
     description:
       "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/public/Image/project3.png",
+    image: "/Image/project3.png",
     tags: ["React", "OpenAI", "Python", "FastAPI"],
     link: "#",
     github: "#",
@@ -33,7 +33,7 @@ const projects = [
     title: "Project Management Tool",
     description:
       "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/public/Image/project4.png",
+    image: "/Image/project4.png",
     tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
     link: "#",
     github: "#",
