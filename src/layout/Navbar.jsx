@@ -17,13 +17,7 @@ const Navbar = () => {
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-transparent py-5">
             <nav className="container mx-auto px-6 flex items-center justify-between">
-                <a href="#" className="relative inline-block text-xl font-bold tracking-tight 
-  transition-colors duration-300 
-  hover:text-primary
-  after:content-[''] after:absolute after:left-0 after:-bottom-1 
-  after:w-0 after:h-0.5 after:bg-primary 
-  after:transition-all after:duration-500 
-  hover:after:w-full">
+                <a href="#" className="relative inline-block text-xl font-bold tracking-tight transition-colors duration-300hover:text-primary after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-500 hover:after:w-full">
                     Rubel Hasan <span className="text-primary font-bold">|</span>
                 </a>
                 <div className="hidden md:flex items-center gap-1">

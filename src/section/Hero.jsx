@@ -1,4 +1,4 @@
-import { ArrowRight, Download, GitBranchIcon } from "lucide-react";
+import { ArrowRight, ChevronDown, Download, GitBranchIcon } from "lucide-react";
 import Button from "../components/Button";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 import { FaGithub } from "react-icons/fa";
@@ -12,8 +12,20 @@ export const Hero = () => {
         link.download = "Rubel-Hasan-CV.pdf";
         link.click();
     };
+
+    const skills = [
+        "React",
+        "Next.js",
+        "Node.js",
+        "MongoDB",
+        "Vercel",
+        "javascript",
+        "Figma",
+        "Git",
+        "GitHub Actions",
+    ];
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden">
+        <section className="relative min-h-screen overflow-hidden">
             {/* Bg */}
             <div className="absolute inset-0">
                 <img
@@ -49,19 +61,19 @@ export const Hero = () => {
                         <div className="animate-fade-in">
                             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                                Software Engineer • React Specialist
+                                Full Stack Web Developer •  React Specialist
                             </span>
                         </div>
 
                         {/* Headline */}
                         <div className="space-y-4">
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                                Crafting <span className="text-primary glow-text">digital</span>
+                                Building <span className="text-primary glow-text">Modern</span>
                                 <br />
-                                experiences with
+                                web experiences with
                                 <br />
                                 <span className="font-serif italic font-normal text-white">
-                                    precision.
+                                    JavaScript, React & Next.js.
                                 </span>
                             </h1>
                             <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
@@ -73,10 +85,10 @@ export const Hero = () => {
 
                         {/* Call to action section */}
                         <div className="flex gap-2">
-                            <a href="mailto:rubelhasanmd29@gmail.com">
-                            <Button size="lg">
-                                Contact <span className="hidden lg:block">Me</span><ArrowRight className="w-5 h-5"></ArrowRight>
-                            </Button>
+                            <a href="#contact">
+                                <Button size="lg">
+                                    Contact <span className="hidden lg:block">Me</span><ArrowRight className="w-5 h-5"></ArrowRight>
+                                </Button>
                             </a>
 
                             <a href="/public/cv.pdf" target="_blank">
@@ -112,7 +124,7 @@ export const Hero = () => {
 
 
                                     {/* Floating badge */}
-                                    <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                                    <div className="absolute -bottom-4 lg:bottom-20 -right-4 glass rounded-xl px-4 py-3 animate-float">
                                         <div className="flex items-center gap-3">
                                             <div className="w-3 h-3 bg-green-500 rounded-full animate-puls" />
                                             <span className="text-sm font-medium">Available For Work</span>
@@ -129,6 +141,41 @@ export const Hero = () => {
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div className="relative z-10 mt-14 space-y-8">
+                {/* Technologies marquee */}
+                <div className="animate-fade-in animation-delay-600">
+                    <p className="text-sm text-muted-foreground mb-4 text-center">
+                        Technologies I work with
+                    </p>
+
+                    <div className="relative max-w-5xl mx-auto overflow-hidden">
+                        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
+                        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
+
+                        <div className="flex w-max animate-marquee">
+                            {[...skills, ...skills].map((skill, idx) => (
+                                <div key={idx} className="flex-shrink-0 px-6 py-3">
+                                    <span className="text-base md:text-lg font-medium text-muted-foreground/70 hover:text-primary transition-colors duration-300">
+                                        {skill}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Scroll button */}
+                <div className="flex justify-center animate-fade-in animation-delay-800">
+                    <a
+                        href="#about"
+                        className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+                    >
+                        <span className="text-xs tracking-widest uppercase">Scroll</span>
+                        <ChevronDown className="w-5 h-5 animate-bounce" />
+                    </a>
+                </div>
+            </div>
+        </section >
     );
 };
