@@ -7,36 +7,36 @@ const projects = [
     description:
       "KeenKeeper is a clean and interactive relationship management app designed to track friendships, monitor communication patterns, and enable quick check-ins like call, text, and video in one place.",
     image: "/Image/project1.png",
-    tags: ["Next.js", "React", "JavaScript", "Tailwind"],
+    tags: ["Next.js", "React", "JavaScript", "Tailwind","HTML","CSS"],
     link: "https://keen-keeper-ashen.vercel.app",
     github: "https://github.com/Rubelhasan-Hub/keen-keeper",
   },
   {
-    title: "E-Commerce Platform",
+    title: "DigiTools-Platform",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
+      "A fast and modern web app to explore and purchase premium digital assets like AI tools, design templates, and stock resources. Built with React & Vite, it offers a smooth shopping experience with cart management, real-time price updates, simple checkout, and instant action-based notifications..",
     image: "/Image/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
-    github: "#",
+    tags: ["Next.js", "React", "JavaScript", "Tailwind","HTML","CSS"],
+    link: "https://digitools-explore-the-new-world.netlify.app/",
+    github: "https://github.com/Rubelhasan-Hub/DigiTools-Platform",
   },
   {
-    title: "AI Writing Assistant",
+    title: "English Janala",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
+      "An interactive English learning app where users can explore lesson-based vocabulary, view meanings and pronunciation, and access detailed information through a modal for better understanding..",
     image: "/Image/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
-    github: "#",
+    tags: ["JavaScript", "Tailwind","HTML","CSS"],
+    link: "https://english-janala-code-nu.vercel.app",
+    github: "https://github.com/Rubelhasan-Hub/English-janala-code",
   },
   {
-    title: "Project Management Tool",
+    title: "English Janala",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
+      "A simple GitHub Issues Tracker web app where users can log in and view issues in card format. It shows total issues, filter by open/closed status, and allows searching issues easily. Built with modern frontend technologies.",
     image: "/Image/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
+    tags: ["React", "JavaScript", "Tailwind","HTML","CSS"],
+    link: "https://github-issue-tracker00112.netlify.app/",
+    github: "https://github.com/Rubelhasan-Hub/B13-A5-Github-Issue-Tracker",
   },
 ];
 
