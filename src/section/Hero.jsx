@@ -1,9 +1,9 @@
 import { ArrowRight, ChevronDown, Download, GitBranchIcon } from "lucide-react";
-import Button from "../components/Button";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 import { FaGithub } from "react-icons/fa";
 import { GrLinkedin } from "react-icons/gr";
 import { SiDiscord } from "react-icons/si";
+import Button from "../components/Button";
 
 export const Hero = () => {
     const handleDownload = () => {
@@ -91,12 +91,10 @@ export const Hero = () => {
                                 </Button>
                             </a>
 
-                            <a href="/public/cv.pdf" target="_blank">
-                                <button onClick={handleDownload}>
-                                    <AnimatedBorderButton>
-                                        <span className="hidden lg:block">Download</span> CV <Download></Download>
-                                    </AnimatedBorderButton>
-                                </button>
+                            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+                                <AnimatedBorderButton onClick={handleDownload}>
+                                    <span className="hidden lg:block">Download</span> CV <Download />
+                                </AnimatedBorderButton>
                             </a>
                         </div>
 

@@ -4,7 +4,7 @@ import About from './section/About'
 import Contact from './section/Contact'
 import Experience from './section/Experience'
 import { Hero } from './section/Hero'
-import Projects from './section/Projects'
+import { Projects } from './section/Projects'
 import Testimonials from './section/Testimonials'
 
 function App() {
