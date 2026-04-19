@@ -77,9 +77,7 @@ export const Hero = () => {
                                 </span>
                             </h1>
                             <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                                Hi, I'm Pedro Machado — a software engineer specializing in
-                                React, Next.js, and TypeScript. I build scalable, performant web
-                                applications that users love.
+                                I am Rubel Hasan, a passionate full-stack web developer with over 2 years of experience specializing in React and Next.js. I create modern, responsive web applications that deliver exceptional user experiences.
                             </p>
                         </div>
 
