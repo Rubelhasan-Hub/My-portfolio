@@ -20,9 +20,9 @@ const Navbar = () => {
                 <a href="#" className="relative inline-block text-xl font-bold tracking-tight transition-colors duration-300hover:text-primary after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-500 hover:after:w-full">
                     Rubel Hasan <span className="text-primary font-bold">|</span>
                 </a>
-                <div className="hidden md:flex items-center gap-1">
+                <div className="hidden md:flex items-center gap-1 ">
                     <div className="glass rounded-full px-2 py-1 flex items-center gap-10">
-                        {navLinks.map((navLink, index) => <a href={navLink.href} key={index} className="px-4 py-2 text-muted-foreground hover:text-foreground rounded-full hover:bg-surface relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-500 hover:after:w-full">{navLink.label}</a>)}
+                        {navLinks.map((navLink, index) => <a href={navLink.href} key={index} className="px-4 py-2 text-gray-300 hover:text-foreground rounded-full hover:bg-surface relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-500 hover:after:w-full">{navLink.label}</a>)}
                     </div>
                 </div>
 
@@ -40,7 +40,7 @@ const Navbar = () => {
 
             {isMobileMenuOpen && (<div className="md:hidden glass-strong animate-fade-in">
                 <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-                    {navLinks.map((navLink, index) => <a href={navLink.href} key={index} className="text-lg text-muted-foreground hover:text-foreground py-2
+                    {navLinks.map((navLink, index) => <a href={navLink.href} key={index} className="text-lg text-white hover:text-foreground py-2
                     ">{navLink.label}</a>)}
 
                     <Button onClick={() => setIsMobileMenuOpen(false)}>

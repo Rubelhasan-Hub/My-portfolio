@@ -77,17 +77,15 @@ export const Hero = () => {
                                 </span>
                             </h1>
                             <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                                I am Rubel Hasan, a passionate full-stack web developer with over 2 years of experience specializing in React and Next.js. I create modern, responsive web applications that deliver exceptional user experiences.
+                                I am Rubel Hasan, a passionate full-stack web developer with over 1 years of experience specializing in React and Next.js. I create modern, responsive web applications that deliver exceptional user experiences.
                             </p>
                         </div>
 
                         {/* Call to action section */}
                         <div className="flex gap-2">
-                            <a href="#contact">
-                                <Button size="lg">
-                                    Contact <span className="hidden lg:block">Me</span><ArrowRight className="w-5 h-5"></ArrowRight>
-                                </Button>
-                            </a>
+                            <Button size="lg">
+                                Contact Me <ArrowRight />
+                            </Button>
 
                             <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
                                 <AnimatedBorderButton onClick={handleDownload}>
@@ -128,7 +126,7 @@ export const Hero = () => {
                                     </div>
                                     {/* State badge */}
                                     <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                                        <div className="text-3xl font-bold text-primary">2+</div>
+                                        <div className="text-3xl font-bold text-primary">1+</div>
                                         <div className="text-xl text-muted-foreground">Years Exp.</div>
                                     </div>
                                 </div>
@@ -146,12 +144,12 @@ export const Hero = () => {
                     </p>
 
                     <div className="relative max-w-5xl mx-auto overflow-hidden">
-                        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
-                        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
+                        <div className="absolute left-0 top-0 bottom-0 w-20 bg-linear-to-r from-background to-transparent z-10" />
+                        <div className="absolute right-0 top-0 bottom-0 w-20 bg-linear-to-l from-background to-transparent z-10" />
 
                         <div className="flex w-max animate-marquee">
                             {[...skills, ...skills].map((skill, idx) => (
-                                <div key={idx} className="flex-shrink-0 px-6 py-3">
+                                <div key={idx} className="shrink-0 px-6 py-3">
                                     <span className="text-base md:text-lg font-medium text-muted-foreground/70 hover:text-primary transition-colors duration-300">
                                         {skill}
                                     </span>

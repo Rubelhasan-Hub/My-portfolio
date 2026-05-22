@@ -3,11 +3,11 @@ import { FaGithub } from "react-icons/fa";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 const projects = [
   {
-   title: "keen-keeper",
+    title: "keen-keeper",
     description:
       "KeenKeeper is a clean and interactive relationship management app designed to track friendships, monitor communication patterns, and enable quick check-ins like call, text, and video in one place.",
     image: "/Image/project1.png",
-    tags: ["Next.js", "React", "JavaScript", "Tailwind","HTML","CSS"],
+    tags: ["Next.js", "React", "JavaScript", "Tailwind", "HTML", "CSS"],
     link: "https://keen-keeper-ashen.vercel.app",
     github: "https://github.com/Rubelhasan-Hub/keen-keeper",
   },
@@ -16,7 +16,7 @@ const projects = [
     description:
       "A fast and modern web app to explore and purchase premium digital assets like AI tools, design templates, and stock resources. Built with React & Vite, it offers a smooth shopping experience with cart management, real-time price updates, simple checkout, and instant action-based notifications..",
     image: "/Image/project2.png",
-    tags: ["Next.js", "React", "JavaScript", "Tailwind","HTML","CSS"],
+    tags: ["Next.js", "React", "JavaScript", "Tailwind", "HTML", "CSS"],
     link: "https://digitools-explore-the-new-world.netlify.app/",
     github: "https://github.com/Rubelhasan-Hub/DigiTools-Platform",
   },
@@ -25,7 +25,7 @@ const projects = [
     description:
       "An interactive English learning app where users can explore lesson-based vocabulary, view meanings and pronunciation, and access detailed information through a modal for better understanding..",
     image: "/Image/project3.png",
-    tags: ["JavaScript", "Tailwind","HTML","CSS"],
+    tags: ["JavaScript", "Tailwind", "HTML", "CSS"],
     link: "https://english-janala-code-nu.vercel.app",
     github: "https://github.com/Rubelhasan-Hub/English-janala-code",
   },
@@ -34,7 +34,7 @@ const projects = [
     description:
       "A simple GitHub Issues Tracker web app where users can log in and view issues in card format. It shows total issues, filter by open/closed status, and allows searching issues easily. Built with modern frontend technologies.",
     image: "/Image/project4.png",
-    tags: ["React", "JavaScript", "Tailwind","HTML","CSS"],
+    tags: ["React", "JavaScript", "Tailwind", "HTML", "CSS"],
     link: "https://github-issue-tracker00112.netlify.app/",
     github: "https://github.com/Rubelhasan-Hub/B13-A5-Github-Issue-Tracker",
   },
@@ -75,34 +75,42 @@ export const Projects = () => {
             >
               {/* Image */}
               <div className="relative overflow-hidden aspect-video">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div
-                  className="absolute inset-0 
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div
+                    className="absolute inset-0 
                 bg-linear-to-t from-card via-card/50
                  to-transparent opacity-60"
-                />
-                {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <FaGithub className="w-5 h-5" />
-                  </a>
-                </div>
+                  />
+                  {/* Overlay Links */}
+                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-300">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                    >
+                      <ArrowUpRight className="w-5 h-5" />
+                    </a>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                    >
+                      <FaGithub className="w-5 h-5" />
+                    </a>
+                  </div>
               </div>
+
+
+
+
+
+
+
+
 
               {/* Content */}
               <div className="p-6 space-y-4">
@@ -143,6 +151,6 @@ export const Projects = () => {
           </AnimatedBorderButton>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
