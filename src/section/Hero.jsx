@@ -8,9 +8,11 @@ import Button from "../components/Button";
 export const Hero = () => {
     const handleDownload = () => {
         const link = document.createElement("a");
-        link.href = "/cv.pdf";
-        link.download = "Rubel-Hasan-CV.pdf";
+        link.href = "/Resume of Md.Rubel Hasan.pdf";
+        link.download = "Resume_of_Md_Rubel_Hasan.pdf";
+        document.body.appendChild(link); 
         link.click();
+        document.body.removeChild(link);
     };
 
     const skills = [
@@ -84,12 +86,12 @@ export const Hero = () => {
                         {/* Call to action section */}
                         <div className="flex gap-2">
                             <Button size="lg">
-                                Contact Me <ArrowRight />
+                                Contact <span className="hidden lg:block">Me</span> <ArrowRight />
                             </Button>
 
                             <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
                                 <AnimatedBorderButton onClick={handleDownload}>
-                                    <span className="hidden lg:block">Download</span> CV <Download />
+                                    <span className="hidden lg:block">Download</span> Resume <Download />
                                 </AnimatedBorderButton>
                             </a>
                         </div>
@@ -114,7 +116,7 @@ export const Hero = () => {
                         <div >
                             <div >
                                 <div className="flex justify-center rounded-3xl p-2">
-                                    <img src="/hero-person.jpg" alt="Rubel Hasan's image" className="w-[65%] object-right glow-border glass rounded-3xl transition-transform duration-500 hover:scale-105" />
+                                    <img src="/hero-person.png" alt="Rubel Hasan's image" className="w-[65%] object-right glow-border glass rounded-3xl transition-transform duration-500 hover:scale-105" />
 
 
                                     {/* Floating badge */}

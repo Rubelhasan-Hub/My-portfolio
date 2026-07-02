@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+
 const projects = [
   {
     title: "FLEXFLOW",
@@ -9,7 +10,8 @@ const projects = [
     image: "/Image/project-5.png",
     tags: ["Node.js", "Express.js", "Next.js", "React", "JavaScript", "Tailwind", "HTML", "CSS"],
     link: "https://flexflow-gym.vercel.app",
-    github: "https://github.com/Rubelhasan-Hub/flexflow-client",
+    githubClient: "https://github.com/Rubelhasan-Hub/flexflow-client",
+    githubServer: "https://github.com/Rubelhasan-Hub/flexflow-server",
   },
   {
     title: "keen-keeper",
@@ -18,7 +20,7 @@ const projects = [
     image: "/Image/project1.png",
     tags: ["Next.js", "React", "JavaScript", "Tailwind", "HTML", "CSS"],
     link: "https://keen-keeper-ashen.vercel.app",
-    github: "https://github.com/Rubelhasan-Hub/keen-keeper",
+    githubClient: "https://github.com/Rubelhasan-Hub/keen-keeper",
   },
   {
     title: "DigiTools-Platform",
@@ -27,7 +29,7 @@ const projects = [
     image: "/Image/project2.png",
     tags: ["Next.js", "React", "JavaScript", "Tailwind", "HTML", "CSS"],
     link: "https://digitools-explore-the-new-world.netlify.app/",
-    github: "https://github.com/Rubelhasan-Hub/DigiTools-Platform",
+    githubClient: "https://github.com/Rubelhasan-Hub/DigiTools-Platform",
   },
   {
     title: "English Janala",
@@ -36,7 +38,7 @@ const projects = [
     image: "/Image/project3.png",
     tags: ["JavaScript", "Tailwind", "HTML", "CSS"],
     link: "https://english-janala-code-nu.vercel.app",
-    github: "https://github.com/Rubelhasan-Hub/English-janala-code",
+    githubClient: "https://github.com/Rubelhasan-Hub/English-janala-code",
   },
   {
     title: "English Janala",
@@ -45,7 +47,7 @@ const projects = [
     image: "/Image/project4.png",
     tags: ["React", "JavaScript", "Tailwind", "HTML", "CSS"],
     link: "https://github-issue-tracker00112.netlify.app/",
-    github: "https://github.com/Rubelhasan-Hub/B13-A5-Github-Issue-Tracker",
+    githubClient: "https://github.com/Rubelhasan-Hub/B13-A5-Github-Issue-Tracker",
   },
 ];
 
@@ -89,23 +91,22 @@ export const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div
-                  className="absolute inset-0 
-                bg-linear-to-t from-card via-card/50
-                 to-transparent opacity-60"
-                />
+                <div className="absolute inset-0 bg-linear-to-t from-card via-card/50 to-transparent opacity-60" />
                 {/* Overlay Links */}
                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-300">
                   <a
                     href={project.link}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                   >
                     <ArrowUpRight className="w-5 h-5" />
                   </a>
+                  {/* Default Github Icon linking to client by default if both exist */}
                   <a
-                    href={project.github}
+                    href={project.githubClient || project.githubServer}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                   >
                     <FaGithub className="w-5 h-5" />
@@ -113,26 +114,13 @@ export const Projects = () => {
                 </div>
               </div>
 
-
-
-
-
-
-
-
-
               {/* Content */}
               <div className="p-6 space-y-4">
                 <div className="flex items-start justify-between">
-                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors line-clamp-2">
                     {project.title}
                   </h3>
-                  <ArrowUpRight
-                    className="w-5 h-5 
-                  text-muted-foreground group-hover:text-primary
-                   group-hover:translate-x-1 
-                   group-hover:-translate-y-1 transition-all"
-                  />
+                  <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                 </div>
                 <p className="text-muted-foreground text-sm">
                   {project.description}
@@ -147,6 +135,32 @@ export const Projects = () => {
                     </span>
                   ))}
                 </div>
+
+                {/* Github Links Section */}
+                {(project.githubClient || project.githubServer) && (
+                  <div className="flex flex-wrap gap-3 pt-2">
+                    {project.githubClient && (
+                      <a
+                        href={project.githubClient}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-4 py-1.5 rounded-full glass text-xs font-medium border border-green-300/20 text-green-300 hover:bg-green-300 hover:text-black transition-all duration-300"
+                      >
+                        Github Client
+                      </a>
+                    )}
+                    {project.githubServer && (
+                      <a
+                        href={project.githubServer}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-4 py-1.5 rounded-full bg-green-300/10 text-xs font-medium border border-green-300/20 text-green-300 hover:bg-green-300 hover:text-black transition-all duration-300"
+                      >
+                        Github Server
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -160,6 +174,6 @@ export const Projects = () => {
           </AnimatedBorderButton>
         </div>
       </div>
-    </section >
+    </section>
   );
 };
