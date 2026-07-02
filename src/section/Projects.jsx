@@ -3,6 +3,15 @@ import { FaGithub } from "react-icons/fa";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 const projects = [
   {
+    title: "FLEXFLOW",
+    description:
+      "FlexFlow is a modern, full-stack web application designed to bridge the gap between fitness trainers and health enthusiasts. It provides a seamless platform for class scheduling, professional booking management, and interactive community engagement.",
+    image: "/Image/project-5.png",
+    tags: ["Node.js", "Express.js", "Next.js", "React", "JavaScript", "Tailwind", "HTML", "CSS"],
+    link: "https://flexflow-gym.vercel.app",
+    github: "https://github.com/Rubelhasan-Hub/flexflow-client",
+  },
+  {
     title: "keen-keeper",
     description:
       "KeenKeeper is a clean and interactive relationship management app designed to track friendships, monitor communication patterns, and enable quick check-ins like call, text, and video in one place.",
@@ -75,33 +84,33 @@ export const Projects = () => {
             >
               {/* Image */}
               <div className="relative overflow-hidden aspect-video">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div
-                    className="absolute inset-0 
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div
+                  className="absolute inset-0 
                 bg-linear-to-t from-card via-card/50
                  to-transparent opacity-60"
-                  />
-                  {/* Overlay Links */}
-                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-300">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                    >
-                      <ArrowUpRight className="w-5 h-5" />
-                    </a>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                    >
-                      <FaGithub className="w-5 h-5" />
-                    </a>
-                  </div>
+                />
+                {/* Overlay Links */}
+                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-300">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                  >
+                    <ArrowUpRight className="w-5 h-5" />
+                  </a>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                  >
+                    <FaGithub className="w-5 h-5" />
+                  </a>
+                </div>
               </div>
 
 

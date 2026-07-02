@@ -73,7 +73,7 @@ export const Hero = () => {
                                 web experiences with
                                 <br />
                                 <span className="font-serif italic font-normal text-white">
-                                    JavaScript, React & Next.js.
+                                    JavaScript, React, Next.js & node.js.
                                 </span>
                             </h1>
                             <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
