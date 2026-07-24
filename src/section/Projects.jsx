@@ -14,6 +14,16 @@ const projects = [
     githubServer: "https://github.com/Rubelhasan-Hub/flexflow-server",
   },
   {
+    title: "DocAppointment",
+    description:
+      "Finding the right healthcare provider and booking medical consultations shouldn't be a hassle. To make healthcare more accessible and streamlined, I developed DocAppointment—a modern, responsive, and user-friendly web application designed to connect patients with top healthcare professionals effortlessly.",
+    image: "/Image/project-6.png",
+    tags: ["Express.js", "Node.js", "Next.js", "React", "JavaScript", "Tailwind", "HTML", "CSS"],
+    link: "https://docappoint-client.vercel.app",
+    githubClient: "https://github.com/Rubelhasan-Hub/docappoint-client",
+    githubServer: "https://github.com/Rubelhasan-Hub/docappoint-server",
+  },
+  {
     title: "keen-keeper",
     description:
       "KeenKeeper is a clean and interactive relationship management app designed to track friendships, monitor communication patterns, and enable quick check-ins like call, text, and video in one place.",

@@ -8,9 +8,9 @@ import Button from "../components/Button";
 export const Hero = () => {
     const handleDownload = () => {
         const link = document.createElement("a");
-        link.href = "/Resume of Md.Rubel Hasan.pdf";
-        link.download = "Resume_of_Md_Rubel_Hasan.pdf";
-        document.body.appendChild(link); 
+        link.href = "/resume.pdf";
+        link.download = "resume.pdf";
+        document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
     };
@@ -89,7 +89,7 @@ export const Hero = () => {
                                 Contact <span className="hidden lg:block">Me</span> <ArrowRight />
                             </Button>
 
-                            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+                            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                                 <AnimatedBorderButton onClick={handleDownload}>
                                     <span className="hidden lg:block">Download</span> Resume <Download />
                                 </AnimatedBorderButton>
