@@ -1,63 +1,55 @@
 import { ArrowUpRight } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const projects = [
   {
+    id: "flexflow",
     title: "FLEXFLOW",
     description:
       "FlexFlow is a modern, full-stack web application designed to bridge the gap between fitness trainers and health enthusiasts. It provides a seamless platform for class scheduling, professional booking management, and interactive community engagement.",
     image: "/Image/project-5.png",
     tags: ["Node.js", "Express.js", "Next.js", "React", "JavaScript", "Tailwind", "HTML", "CSS"],
-    link: "https://flexflow-gym.vercel.app",
-    githubClient: "https://github.com/Rubelhasan-Hub/flexflow-client",
-    githubServer: "https://github.com/Rubelhasan-Hub/flexflow-server",
   },
   {
+    id: "docappointment",
     title: "DocAppointment",
     description:
       "Finding the right healthcare provider and booking medical consultations shouldn't be a hassle. To make healthcare more accessible and streamlined, I developed DocAppointment—a modern, responsive, and user-friendly web application designed to connect patients with top healthcare professionals effortlessly.",
     image: "/Image/project-6.png",
     tags: ["Express.js", "Node.js", "Next.js", "React", "JavaScript", "Tailwind", "HTML", "CSS"],
-    link: "https://docappoint-client.vercel.app",
-    githubClient: "https://github.com/Rubelhasan-Hub/docappoint-client",
-    githubServer: "https://github.com/Rubelhasan-Hub/docappoint-server",
   },
   {
+    id: "keen-keeper",
     title: "keen-keeper",
     description:
       "KeenKeeper is a clean and interactive relationship management app designed to track friendships, monitor communication patterns, and enable quick check-ins like call, text, and video in one place.",
     image: "/Image/project1.png",
     tags: ["Next.js", "React", "JavaScript", "Tailwind", "HTML", "CSS"],
-    link: "https://keen-keeper-ashen.vercel.app",
-    githubClient: "https://github.com/Rubelhasan-Hub/keen-keeper",
   },
   {
+    id: "digitools-platform",
     title: "DigiTools-Platform",
     description:
-      "A fast and modern web app to explore and purchase premium digital assets like AI tools, design templates, and stock resources. Built with React & Vite, it offers a smooth shopping experience with cart management, real-time price updates, simple checkout, and instant action-based notifications..",
+      "A fast and modern web app to explore and purchase premium digital assets like AI tools, design templates, and stock resources. Built with React & Vite, it offers a smooth shopping experience with cart management, real-time price updates, simple checkout, and instant action-based notifications.",
     image: "/Image/project2.png",
     tags: ["Next.js", "React", "JavaScript", "Tailwind", "HTML", "CSS"],
-    link: "https://digitools-explore-the-new-world.netlify.app/",
-    githubClient: "https://github.com/Rubelhasan-Hub/DigiTools-Platform",
   },
   {
+    id: "english-janala",
     title: "English Janala",
     description:
-      "An interactive English learning app where users can explore lesson-based vocabulary, view meanings and pronunciation, and access detailed information through a modal for better understanding..",
+      "An interactive English learning app where users can explore lesson-based vocabulary, view meanings and pronunciation, and access detailed information through a modal for better understanding.",
     image: "/Image/project3.png",
     tags: ["JavaScript", "Tailwind", "HTML", "CSS"],
-    link: "https://english-janala-code-nu.vercel.app",
-    githubClient: "https://github.com/Rubelhasan-Hub/English-janala-code",
   },
   {
-    title: "English Janala",
+    id: "github-issue-tracker",
+    title: "GitHub Issues Tracker",
     description:
       "A simple GitHub Issues Tracker web app where users can log in and view issues in card format. It shows total issues, filter by open/closed status, and allows searching issues easily. Built with modern frontend technologies.",
     image: "/Image/project4.png",
     tags: ["React", "JavaScript", "Tailwind", "HTML", "CSS"],
-    link: "https://github-issue-tracker00112.netlify.app/",
-    githubClient: "https://github.com/Rubelhasan-Hub/B13-A5-Github-Issue-Tracker",
   },
 ];
 
@@ -67,6 +59,7 @@ export const Projects = () => {
       {/* Bg glows */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
+      
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mx-auto max-w-3xl mb-16">
@@ -86,92 +79,55 @@ export const Projects = () => {
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
+        {/* Projects Grid (At least 3 Projects) */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
             <div
-              key={idx}
-              className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
-              style={{ animationDelay: `${(idx + 1) * 100}ms` }}
+              key={project.id}
+              className="group glass rounded-2xl overflow-hidden animate-fade-in flex flex-col justify-between border border-border/50 hover:border-primary/50 transition-all duration-300"
             >
-              {/* Image */}
-              <div className="relative overflow-hidden aspect-video">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-card via-card/50 to-transparent opacity-60" />
-                {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-100 lg:opacity-0 lg:hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                  </a>
-                  {/* Default Github Icon linking to client by default if both exist */}
-                  <a
-                    href={project.githubClient || project.githubServer}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <FaGithub className="w-5 h-5" />
-                  </a>
+              <div>
+                {/* Project Image */}
+                <div className="relative overflow-hidden aspect-video">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-card via-card/50 to-transparent opacity-60" />
                 </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-6 space-y-4">
-                <div className="flex items-start justify-between">
-                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors line-clamp-2">
+                {/* Project Name & Description */}
+                <div className="p-6 space-y-4">
+                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors line-clamp-1">
                     {project.title}
                   </h3>
-                  <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
-                </div>
-                <p className="text-muted-foreground text-sm">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIdx) => (
-                    <span
-                      key={tagIdx}
-                      className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Github Links Section */}
-                {(project.githubClient || project.githubServer) && (
-                  <div className="flex flex-wrap gap-3 pt-2">
-                    {project.githubClient && (
-                      <a
-                        href={project.githubClient}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block px-4 py-1.5 rounded-full glass text-xs font-medium border border-green-300/20 text-green-300 hover:bg-green-300 hover:text-black transition-all duration-300"
+                  <p className="text-muted-foreground text-sm line-clamp-3">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.slice(0, 4).map((tag, tagIdx) => (
+                      <span
+                        key={tagIdx}
+                        className="px-3 py-1 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground"
                       >
-                        Github Client
-                      </a>
-                    )}
-                    {project.githubServer && (
-                      <a
-                        href={project.githubServer}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block px-4 py-1.5 rounded-full bg-green-300/10 text-xs font-medium border border-green-300/20 text-green-300 hover:bg-green-300 hover:text-black transition-all duration-300"
-                      >
-                        Github Server
-                      </a>
-                    )}
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                )}
+                </div>
               </div>
+
+              {/* View More / Details Button */}
+              <div className="p-6 pt-0">
+                <Link
+                  to={`/project/${project.id}`}
+                  className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-primary-foreground font-medium text-sm transition-all duration-300"
+                >
+                  View More / Details <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </div>
+
             </div>
           ))}
         </div>

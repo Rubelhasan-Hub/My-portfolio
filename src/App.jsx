@@ -3,6 +3,7 @@ import { Footer } from './layout/Footer'
 import Navbar from './layout/Navbar'
 import About from './section/About'
 import { Contact } from './section/Contact'
+import { Education } from './section/Education'
 import { Experience } from './section/Experience'
 import { Hero } from './section/Hero'
 import { Projects } from './section/Projects'
@@ -19,6 +20,7 @@ function App() {
         <About />
         <Projects />
         <Experience />
+        <Education />
         <Testimonials />
         <Contact />
         <Footer />
